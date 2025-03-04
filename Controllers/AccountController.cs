@@ -14,6 +14,7 @@ namespace TransportModule.Controllers
 
         public AccountController(SignInManager<Users> signInManager, UserManager<Users> userManager)
         {
+            // Dependency Injection
             this.signInManager = signInManager;
             this.userManager = userManager;
         }
