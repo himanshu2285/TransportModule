@@ -12,16 +12,15 @@
             Streamline logistics, manage bills, and get real-time insights for your transport business.
         </p>
         <div class="mt-4">
-            <a href="#" class="btn btn-primary btn-lg me-2">Get Started</a>
-            <a href="#" class="btn btn-outline-secondary btn-lg">Learn More</a>
+            <a class="btn btn-primary btn-lg me-2" asp-controller="Account" asp-action="Login">Get Started</a>
+            <a class="btn btn-outline-secondary btn-lg">Learn More</a>
         </div>
     </div>
     <div class="col-md-6 text-center p-5">
         <!-- Replace with an appropriate transport-themed image or illustration -->
-        <img src="~/images/transport-hero.png" alt="Transport Illustration" class="img-fluid" />
+        <img src="~/images/transport-hero.jpg" alt="Transport Illustration" class="img-fluid" />
     </div>
 </div>
-
 
 @* <div class="text-center"> *@
 @*     <h1 class="display-4">Welcome to Transport Module</h1> *@
@@ -29,3 +28,71 @@
 @*     <p>Click on the below button to get started.</p> *@
 @*     <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Get Started</a> *@
 @* </div> *@
+
+<!-- Features Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Real-time Tracking</h5>
+                    <p class="card-text">
+                        Monitor vehicle locations and shipment statuses in real-time to enhance transparency and efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Automated Billing</h5>
+                    <p class="card-text">
+                        Generate invoices and manage payments effortlessly with our integrated billing system.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Analytics & Reporting</h5>
+                    <p class="card-text">
+                        Gain insights into expenses, revenues, and overall performance with our dynamic dashboards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Manage Bills Highlight -->
+<div class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-3">Manage Your Bills Seamlessly</h2>
+        <p class="mb-4">
+            Keep track of all your transport-related invoices and payments in one place.
+        </p>
+        <a class="btn btn-light btn-lg" asp-area="" asp-controller="Bills" asp-action="Index">
+            Go to Manage Bills
+        </a>
+    </div>
+</div>
+
+<!-- About Us Teaser -->
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>About Us</h2>
+            <p>
+                We are dedicated to making transport management simpler, faster, and more transparent for businesses of all sizes.
+                Our platform combines robust logistics features with powerful billing tools, helping you save time and reduce errors.
+            </p>
+            <a class="btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="About">Learn More</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <!-- Replace with an appropriate team or company illustration -->
+            <img src="~/images/about-us.png" alt="About Us" class="img-fluid" />
+        </div>
+    </div>
+</div>
