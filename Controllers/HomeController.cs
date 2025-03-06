@@ -18,6 +18,10 @@ namespace TransportModule1.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
+            return View();
+        }
 
         [Authorize]
         public IActionResult Privacy()
