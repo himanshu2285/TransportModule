@@ -18,12 +18,16 @@ namespace TransportModule1.Controllers
         {
             return View();
         }
+        public IActionResult Features()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();
         }
 
-        [Authorize]
+        //[Authorize] to access this page, user must be authenticated
         public IActionResult Privacy()
         {
             return View();

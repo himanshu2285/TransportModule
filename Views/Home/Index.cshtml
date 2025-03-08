@@ -6,10 +6,10 @@
 <div class="row mx-0 align-items-center" style="background-color: #f5f7fa;">
     <div class="col-md-6 p-5">
         <h1 class="display-5 fw-bold">
-            Simplify Your Transport & Billing with <span class="text-primary">Transport Module</span>
+            Simplify Your Billing & Invoicing with <span class="text-primary">Transport Module</span>
         </h1>
         <p class="lead">
-            Streamline logistics, manage bills, and get real-time insights for your transport business.
+            Manage party details, create bills, and streamline your billing process — all in one place.
         </p>
         <div class="mt-4">
             <a class="btn btn-primary btn-lg me-2" asp-controller="Account" asp-action="Login">Get Started</a>
@@ -33,32 +33,35 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Features</h2>
     <div class="row g-4">
+        <!-- Manage Party Details -->
         <div class="col-md-4">
             <div class="card h-100 border-0 shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title fw-bold">Real-time Tracking</h5>
+                    <h5 class="card-title fw-bold">Manage Party Details</h5>
                     <p class="card-text">
-                        Monitor vehicle locations and shipment statuses in real-time to enhance transparency and efficiency.
+                        Add, edit, and store customer and vendor information with ease.
                     </p>
                 </div>
             </div>
         </div>
+        <!-- Create & Track Bills -->
         <div class="col-md-4">
             <div class="card h-100 border-0 shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title fw-bold">Automated Billing</h5>
+                    <h5 class="card-title fw-bold">Create & Track Bills</h5>
                     <p class="card-text">
-                        Generate invoices and manage payments effortlessly with our integrated billing system.
+                        Generate new invoices, track payments, and keep an organized record of all bills.
                     </p>
                 </div>
             </div>
         </div>
+        <!-- Analytics & Reporting -->
         <div class="col-md-4">
             <div class="card h-100 border-0 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Analytics & Reporting</h5>
                     <p class="card-text">
-                        Gain insights into expenses, revenues, and overall performance with our dynamic dashboards.
+                        Analyze billing trends and performance to make informed financial decisions.
                     </p>
                 </div>
             </div>
@@ -66,12 +69,13 @@
     </div>
 </div>
 
-<!-- Manage Bills Highlight -->
+
+<!-- Manage Bills Highlight Section -->
 <div class="bg-primary text-white py-5">
     <div class="container text-center">
-        <h2 class="mb-3">Manage Your Bills Seamlessly</h2>
+        <h2 class="mb-3">Manage Your Bills Easily</h2>
         <p class="mb-4">
-            Keep track of all your transport-related invoices and payments in one place.
+            Centralize all your billing information—from creation to final payment—in one intuitive platform.
         </p>
         <a class="btn btn-light btn-lg" asp-area="" asp-controller="Bills" asp-action="Index">
             Go to Manage Bills
@@ -79,20 +83,20 @@
     </div>
 </div>
 
-<!-- About Us Teaser -->
+<!-- About Us Section -->
 <div class="container my-5">
     <div class="row align-items-center">
         <div class="col-md-6">
             <h2>About Us</h2>
             <p>
-                We are dedicated to making transport management simpler, faster, and more transparent for businesses of all sizes.
-                Our platform combines robust logistics features with powerful billing tools, helping you save time and reduce errors.
+                We aim to simplify billing and invoicing for your business. Our platform provides intuitive tools for creating, tracking, and analyzing bills efficiently.
             </p>
             <a class="btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="About">Learn More</a>
         </div>
         <div class="col-md-6 text-center">
-            <!-- Replace with an appropriate team or company illustration -->
-            <img src="~/images/about-us.png" alt="About Us" class="img-fluid" />
+            <!-- Replace with your team/company illustration -->
+            @* <img src="~/images/about-us1.jpg" alt="About Us" class="img-fluid" /> *@
+            <img src="~/images/about-us.jpg" alt="About Us" class="img-fluid" />
         </div>
     </div>
 </div>

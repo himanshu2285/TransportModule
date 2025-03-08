@@ -1,1 +1,99 @@
-﻿<h1>This is About Us Page.</h1>
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #007BFF;
+            text-align: center;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .features {
+            margin-top: 20px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+                background: #BA6FF7;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 12px 20px;
+                background: #B218F2;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .cta a:hover {
+                    background: #B218F2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <h2>Revolutionizing Transportation Management</h2>
+        <p>Welcome to <strong>Transport Module</strong>, your ultimate solution for modern and efficient transportation management. We are committed to transforming the way businesses and individuals handle transportation logistics with our advanced, user-friendly, and secure platform.</p>
+
+        <h3>Who We Are</h3>
+        <p>At <strong>Transport Module</strong>, we believe in leveraging technology to simplify and optimize transportation operations. Whether it's <strong>booking, billing management, route planning, payment integration, real-time schedules, or personalized user profiles</strong>, our platform is designed to meet diverse transportation needs with efficiency, reliability, and security.</p>
+
+        <h3>Why Choose Us?</h3>
+        <div class="features">
+            <ul>
+                <li>✔ Comprehensive Features</li>
+                <li>✔ User-Friendly Interface</li>
+                <li>✔ Secure & Reliable</li>
+                <li>✔ Scalability & Flexibility</li>
+                <li>✔ Dedicated Support</li>
+            </ul>
+        </div>
+
+        <h3>Join Us in Shaping the Future of Transportation</h3>
+        <p>At <strong>Transport Module</strong>, we are constantly evolving to meet the changing demands of the transportation industry. Our innovative approach ensures that businesses and individuals have access to cutting-edge technology for seamless transport operations.</p>
+
+        <div class="cta">
+            <a asp-controller="Home" asp-action="Index">🚀 Get Started Today!</a>
+        </div>
+
+    </div>
+</body>
+</html>
