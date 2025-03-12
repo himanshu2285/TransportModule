@@ -28,7 +28,10 @@
                     <ul class="navbar-nav flex-grow-1">
                         @* <li class="nav-item"> *@
                         @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
-                        @* </li> *@                                          
+                        @* </li> *@      
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#features">Features</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Bills" asp-action="Index">Manage Bills</a>
                         </li>
@@ -49,6 +52,17 @@
             @RenderBody()
         </main>
     </div>
+    @* Scroll to the element with the ID specified in the URL hash *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.location.hash) {
+                let element = document.querySelector(window.location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
+    </script>
 
     <footer class="border-top footer text-muted">
         <div class="container">
