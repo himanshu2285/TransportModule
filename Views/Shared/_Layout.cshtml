@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav id="navMenu" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <!-- Logo / Brand -->
                 <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">
@@ -24,25 +24,36 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar Links -->
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
-                    <ul class="navbar-nav flex-grow-1">
-                        @* <li class="nav-item"> *@
-                        @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
-                        @* </li> *@      
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Bills" asp-action="Index">Manage Bills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <partial name="_LoginPartial" />
-                    </ul>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">                    
+                    @if (User?.Identity?.IsAuthenticated == false)
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            @* <li class="nav-item"> *@
+                            @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+                            @* </li> *@      
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#features">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Bills" asp-action="Index">Manage Bills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <partial name="_LoginPartial" />
+                        </ul>
+                    }
+                    @if (User?.Identity?.IsAuthenticated == true)
+                    {
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                document.getElementById("navMenu").style.display = "none";
+                            });
+                        </script>
+                    }
                 </div>
             </div>
         </nav>

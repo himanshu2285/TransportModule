@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Keep layout but hide navbar using JavaScript
+}
+
+<div class="container">
+    <h2 class="text-center">Dashboard</h2>
+
+    <div class="card p-3">
+        <h5>Manage Invoices</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>LR Date</th>
+                    <th>LR No.</th>
+                    <th>Vehicle Type</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Tempo No.</th>
+                    <th>Freight</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceTable">
+                <tr>
+                    <td><input type="date" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="number" class="form-control freight"></td>
+                    <td>
+                        <button class="btn btn-danger btn-sm delete-row">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" id="addRow">Add Row</button>
+        <button class="btn btn-success">Save</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("addRow").addEventListener("click", function () {
+        let table = document.getElementById("invoiceTable");
+        let row = table.insertRow();
+        row.innerHTML = `<td><input type="date" class="form-control"></td>
+                         <td><input type="text" class="form-control"></td>
+                         <td><input type="text" class="form-control"></td>
+                         <td><input type="text" class="form-control"></td>
+                         <td><input type="text" class="form-control"></td>
+                         <td><input type="text" class="form-control"></td>
+                         <td><input type="number" class="form-control freight"></td>
+                         <td><button class="btn btn-danger btn-sm delete-row">Delete</button></td>`;
+    });
+
+    document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("delete-row")) {
+            event.target.parentElement.parentElement.remove();
+        }
+    });
+</script>
