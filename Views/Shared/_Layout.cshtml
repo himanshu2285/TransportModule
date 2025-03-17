@@ -7,6 +7,8 @@
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="~/TransportModule1.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -33,10 +35,7 @@
                             @* </li> *@      
                             <li class="nav-item">
                                 <a class="nav-link" href="/#features">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Bills" asp-action="Index">Manage Bills</a>
-                            </li>
+                            </li>            
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                             </li>
@@ -48,11 +47,12 @@
                     }
                     @if (User?.Identity?.IsAuthenticated == true)
                     {
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                document.getElementById("navMenu").style.display = "none";
-                            });
-                        </script>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">Manage Bills</a>
+                            </li>
+                            <partial name="_LoginPartial" />
+                        </ul>
                     }
                 </div>
             </div>

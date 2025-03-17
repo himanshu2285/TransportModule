@@ -10,5 +10,6 @@ namespace TransportModule1.Data
         {
 
         }
+        public DbSet<Bills> Bills { get; set; } // Add this line to manage bills
     }
 }
