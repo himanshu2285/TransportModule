@@ -3,49 +3,62 @@
     ViewData["Title"] = "Create Bill";
 }
 
-<a asp-controller="Dashboard" asp-action="Index" class="nav-link">Manage Bills</a>
-<h2>Create Bill</h2>
+<div class="container mt-5">
+    <a asp-controller="Dashboard" asp-action="Index" class="nav-link btn btn-secondary mb-3">Manage Bills</a>
+    
+    <div class="card">
+        <div class="card-header">
+            <h2>Create Bill</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="CreateBill" method="post">
+                <div class="form-group">
+                    <label asp-for="LrDate" class="form-label"></label>
+                    <input asp-for="LrDate" type="date" class="form-control" required />                  
+                </div>
 
-<form asp-action="CreateBill" method="post">
-    <div class="form-group">
-        <label asp-for="LrDate"></label>
-        <input asp-for="LrDate" type="date" class="form-control" required />
+                <div class="form-group pt-1">
+                    <label asp-for="LrNo" class="form-label"></label>
+                    <input asp-for="LrNo" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="VehicleType" class="form-label"></label>
+                    <input asp-for="VehicleType" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="From" class="form-label"></label>
+                    <input asp-for="From" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="To" class="form-label"></label>
+                    <input asp-for="To" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="VehicleNo" class="form-label"></label>
+                    <input asp-for="VehicleNo" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="Freight" class="form-label"></label>
+                    <input asp-for="Freight" type="number" step="0.01" class="form-control" required />
+                </div>
+
+                <div class="form-group pt-1">
+                    <label asp-for="Others" class="form-label"></label>
+                    <input asp-for="Others" class="form-control" />
+                    <small class="form-text text-muted">Any additional information.</small>
+                </div>
+
+                <div class="pt-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    @* <button type="reset" class="btn btn-secondary">Reset</button> *@
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <label asp-for="LrNo"></label>
-        <input asp-for="LrNo" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="VehicleType"></label>
-        <input asp-for="VehicleType" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="From"></label>
-        <input asp-for="From" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="To"></label>
-        <input asp-for="To" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="VehicleNo"></label>
-        <input asp-for="VehicleNo" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Freight"></label>
-        <input asp-for="Freight" type="number" step="0.01" class="form-control" required />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Others"></label>
-        <input asp-for="Others" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Save</button>
-</form>

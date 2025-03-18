@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 using TransportModule1.Data; // Your DbContext namespace
@@ -16,6 +17,7 @@ namespace TransportModule.Controllers
         }
 
         // Display Bills
+        [Authorize] // to access this page, user must be authenticated
         public async Task<IActionResult> Index()
         {
             var bills = _context.Bills.ToList();
@@ -78,6 +80,39 @@ namespace TransportModule.Controllers
             }
 
             return View(bill);
+        }
+        // Delete Bill (GET) - Show Confirmation Page
+        public async Task<IActionResult> DeleteBill(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var bill = await _context.Bills.FindAsync(id);
+            if (bill == null)
+            {
+                return NotFound();
+            }
+
+            return View(bill);
+        }
+
+        // Delete Bill (POST) - Actual Deletion
+        [HttpPost, ActionName("DeleteBill")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var bill = await _context.Bills.FindAsync(id);
+            if (bill == null)
+            {
+                return NotFound();
+            }
+
+            _context.Bills.Remove(bill);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Dashboard");
         }
 
     }

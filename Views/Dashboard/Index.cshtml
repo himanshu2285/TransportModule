@@ -1,44 +1,107 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml"; // Keep layout but hide navbar using JavaScript
 }
+
 @model IEnumerable<TransportModule1.Models.Bills>
 
-<h2>Bill List</h2>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Transport Details</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Lr Date</th>
-            <th>Lr No</th>
-            <th>Vehicle Type</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Vehicle No</th>
-            <th>Freight</th>
-            <th>Others</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var bill in Model.OrderBy(u => u.Id))
-        {
-            <tr>
-                <td>@bill.LrDate.ToShortDateString()</td>
-                <td>@bill.LrNo</td>
-                <td>@bill.VehicleType</td>
-                <td>@bill.From</td>
-                <td>@bill.To</td>
-                <td>@bill.VehicleNo</td>
-                <td>@bill.Freight</td>
-                <td>@bill.Others</td>
-                <td>
-                    <a asp-controller="Dashboard" asp-action="EditBill" asp-route-id="@bill.Id" class="btn btn-warning btn-sm">Edit</a>
-                    <a asp-controller="Dashboard" asp-action="DeleteBill" asp-route-id="@bill.Id" class="btn btn-danger btn-sm">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <!-- Create Bill Button -->
+    <div class="d-flex justify-content-between mb-3">
+        <a asp-action="CreateBill" class="btn btn-success">
+            <i class="fas fa-plus"></i> Create Bill
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover shadow">
+            <thead class="bg-primary text-white text-center">
+                <tr>
+                    <th>Lr Date</th>
+                    <th>Lr No.</th>
+                    <th>Vehicle Type</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Tempo No.</th>
+                    <th>Freight</th>
+                    <th>Others</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                @foreach (var bill in Model)
+                {
+                    <tr>
+                        <td>@bill.LrDate.ToShortDateString()</td>
+                        <td>@bill.LrNo</td>
+                        <td>@bill.VehicleType</td>
+                        <td>@bill.From</td>
+                        <td>@bill.To</td>
+                        <td>@bill.VehicleNo</td>
+                        <td>₹ @bill.Freight</td>
+                        <td>@bill.Others</td>
+                        <td>
+                            <a asp-action="EditBill" asp-route-id="@bill.Id" class="btn btn-warning btn-sm">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a asp-action="DeleteBill" asp-route-id="@bill.Id" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+@* @model IEnumerable<TransportModule1.Models.Bills> *@
+
+@* <h2>Bill List</h2> *@
+@* <!-- Create Bill Button --> *@
+@* <a asp-action="CreateBill" class="btn btn-primary mb-3">Create Bill</a> *@
+@* <table class="table"> *@
+@*     <thead> *@
+@*         <tr> *@
+@*             <th>Lr Date</th> *@
+@*             <th>Lr No</th> *@
+@*             <th>Vehicle Type</th> *@
+@*             <th>From</th> *@
+@*             <th>To</th> *@
+@*             <th>Vehicle No</th> *@
+@*             <th>Freight</th> *@
+@*             <th>Others</th> *@
+@*             <th>Actions</th> *@
+@*         </tr> *@
+@*     </thead> *@
+@*     <tbody> *@
+@*         @foreach (var bill in Model.OrderBy(u => u.Id)) *@
+@*         { *@
+@*             <tr> *@
+@*                 <td>@bill.LrDate.ToShortDateString()</td> *@
+@*                 <td>@bill.LrNo</td> *@
+@*                 <td>@bill.VehicleType</td> *@
+@*                 <td>@bill.From</td> *@
+@*                 <td>@bill.To</td> *@
+@*                 <td>@bill.VehicleNo</td> *@
+@*                 <td>@bill.Freight</td> *@
+@*                 <td>@bill.Others</td> *@
+@*                 <td> *@
+@*                     <a asp-controller="Dashboard" asp-action="EditBill" asp-route-id="@bill.Id" class="btn btn-warning btn-sm">Edit</a> *@
+@*                     <a asp-controller="Dashboard" asp-action="DeleteBill" asp-route-id="@bill.Id" class="btn btn-danger btn-sm">Delete</a> *@
+@*                 </td> *@
+@*             </tr> *@
+@*         } *@
+@*     </tbody> *@
+@* </table> *@
+
+
 
 
 
