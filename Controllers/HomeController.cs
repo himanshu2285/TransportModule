@@ -23,7 +23,7 @@ namespace TransportModule1.Controllers
             return View();
         }
 
-        [Authorize] // to access this page, user must be authenticated
+        // [Authorize] to access this page, user must be authenticated
         public IActionResult Privacy()
         {
             return View();
