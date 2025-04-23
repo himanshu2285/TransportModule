@@ -74,6 +74,8 @@ Website Visuals:
 ![image](https://github.com/user-attachments/assets/06f59035-0398-42aa-bb52-f32ebcf09cf9)
 ![image](https://github.com/user-attachments/assets/44e977df-28cf-493c-867c-535c73bd4fef)
 ![image](https://github.com/user-attachments/assets/652b07f7-4ef6-4617-9032-e45f56d79e97)
+![image](https://github.com/user-attachments/assets/a4449ec8-0e5b-4b39-b3be-0fbf43e03644)
+
 
 
 
