@@ -65,8 +65,16 @@ ________________________________________
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
+
 Website Visuals:
 ![image](https://github.com/user-attachments/assets/d04e7a52-89f1-422d-b9fe-66d826c27c7a)
+![image](https://github.com/user-attachments/assets/255a6e4f-5f64-4c3c-92e1-0180b289afa2)
+![image](https://github.com/user-attachments/assets/ff8b654e-1d76-43ff-9bcb-7cb1f0d9f35b)
+![image](https://github.com/user-attachments/assets/0a6fee29-f95b-4e2b-a4cc-4dd3a56cc7bb)
+![image](https://github.com/user-attachments/assets/06f59035-0398-42aa-bb52-f32ebcf09cf9)
+![image](https://github.com/user-attachments/assets/44e977df-28cf-493c-867c-535c73bd4fef)
+![image](https://github.com/user-attachments/assets/652b07f7-4ef6-4617-9032-e45f56d79e97)
+
 
 
 
