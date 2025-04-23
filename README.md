@@ -56,18 +56,6 @@ dotnet run
 ________________________________________
 🧪 Testing
 Test cases are designed and implemented for key modules to ensure system reliability. Unit tests can be added in the Tests/ folder using a test framework like xUnit or MSTest.
-________________________________________
-📖 Documentation
-•	Chapter 1: Introduction & Objectives
-•	Chapter 2: Literature Review (20+ research papers)
-•	Chapter 3: Problem Statement & Requirements
-•	Chapter 4: System Design (Modules, UI, Security, Test Cases)
-________________________________________
-🔐 Security Features
-•	Password encryption
-•	SQL Injection protection
-•	Role-based access control (admin, user)
-________________________________________
 
 👥 Contributors
 •	Developer: Himanshu Mishra
@@ -75,4 +63,12 @@ ________________________________________
 
 📃 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+Website Visuals:
+![image](https://github.com/user-attachments/assets/d04e7a52-89f1-422d-b9fe-66d826c27c7a)
+
+
+
+
 
